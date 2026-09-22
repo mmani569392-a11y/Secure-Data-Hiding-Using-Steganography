@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Success - Secure Data Hiding{% endblock %}
+{% block content %}
+<section class="result-page">
+    <div class="result-card">
+        <div class="success-icon">✓</div>
+        <p class="eyebrow">SENDER SIDE</p>
+        <h1>{{ title }}</h1>
+        <p>Your encoded image is ready.</p>
+        <p class="file-name">{{ output_name }}</p>
+        <a class="button primary" href="{{ output_url }}">DOWNLOAD ENCODED IMAGE</a>
+        <a class="button secondary" href="{{ url_for('decryption') }}">GO TO RECEIVER SIDE</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Encryption - Sender Side{% endblock %}
+{% block content %}
+<section class="form-page">
+    <div class="form-card">
+        <p class="eyebrow">SENDER SIDE</p>
+        <h1>Secure Encryption & Steganography</h1>
+        <p class="muted">Choose a cover image, protect your message, and create an encoded PNG.</p>
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="field">
+                <label>Source / Cover Image</label>
+                <input class="input" type="file" name="source_image" accept=".png,.jpg,.jpeg,.bmp" required>
+            </div>
+
+            <div class="field">
+                <label>Secret Message</label>
+                <textarea class="input textarea" name="message" placeholder="Enter the message to hide..." required></textarea>
+            </div>
+
+            <div class="two-col">
+                <div class="field">
+                    <label>Prime 1</label>
+                    <input class="input" type="number" name="prime_1" placeholder="Example: 991" min="2" required>
+                </div>
+                <div class="field">
+                    <label>Prime 2</label>
+                    <input class="input" type="number" name="prime_2" placeholder="Example: 997" min="2" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Password</label>
+                <input class="input" type="password" name="password" placeholder="Minimum 6 characters" required>
+            </div>
+
+            <div class="field">
+                <label>New Image Name</label>
+                <input class="input" type="text" name="new_name" placeholder="output.png">
+            </div>
+
+            <button class="button primary" type="submit">HIDE MESSAGE</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Recovered Message - Secure Data Hiding{% endblock %}
+{% block content %}
+<section class="result-page">
+    <div class="result-card">
+        <div class="success-icon">✓</div>
+        <p class="eyebrow">RECEIVER SIDE</p>
+        <h1>{{ title }}</h1>
+        <div class="message-box">{{ message }}</div>
+        <a class="button secondary" href="{{ url_for('encryption') }}">NEW ENCRYPTION</a>
+    </div>
+</section>
+{% endblock %}

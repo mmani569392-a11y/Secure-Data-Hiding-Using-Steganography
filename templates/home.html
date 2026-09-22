@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Home - Secure Data Hiding{% endblock %}
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <p class="eyebrow">BCA PROJECT</p>
+        <h1>Welcome To</h1>
+        <h2>Secure Data Hiding Using Crypto And Stego</h2>
+        <p class="hero-text">
+            Hide an encrypted secret message inside an ordinary image and
+            recover it only with the correct credentials.
+        </p>
+
+        <div class="side-grid">
+            <a class="side-card" href="{{ url_for('encryption') }}">
+                <div class="icon-lock">🔐</div>
+                <h3>Sender Side</h3>
+                <p>Encrypt and hide a secret message.</p>
+            </a>
+
+            <a class="side-card" href="{{ url_for('decryption') }}">
+                <div class="icon-lock">🔓</div>
+                <h3>Receiver Side</h3>
+                <p>Extract and decrypt the hidden message.</p>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

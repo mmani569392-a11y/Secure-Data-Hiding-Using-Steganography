@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Decryption - Receiver Side{% endblock %}
+{% block content %}
+<section class="form-page">
+    <div class="form-card">
+        <p class="eyebrow">RECEIVER SIDE</p>
+        <h1>Extract & Decrypt</h1>
+        <p class="muted">Upload the encoded PNG and enter the same credentials used by the sender.</p>
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="field">
+                <label>Encoded Image / Cover Name</label>
+                <input class="input" type="file" name="encoded_image" accept=".png,.jpg,.jpeg,.bmp" required>
+            </div>
+
+            <div class="two-col">
+                <div class="field">
+                    <label>Prime 1</label>
+                    <input class="input" type="number" name="prime_1" placeholder="Example: 991" min="2" required>
+                </div>
+                <div class="field">
+                    <label>Prime 2</label>
+                    <input class="input" type="number" name="prime_2" placeholder="Example: 997" min="2" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Password</label>
+                <input class="input" type="password" name="password" placeholder="Enter sender password" required>
+            </div>
+
+            <div class="field">
+                <label>New Cover Name (reference field)</label>
+                <input class="input" type="text" name="new_cover_name" placeholder="final.png">
+            </div>
+
+            <button class="button primary" type="submit">EXTRACT MESSAGE</button>
+        </form>
+    </div>
+</section>
+{% endblock %}
